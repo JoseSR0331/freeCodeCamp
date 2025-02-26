@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <!-- Hoja de Estilos -->
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1 id="title">freeCodeCamp Survey Form</h1>
+        <p id="description">Thank you for taking the time to complete this form</p>
+      </header>
+      <!-- Formulario -->
+      <form id="survey-form">
+        <fieldset>
+          <h3>User Data</h3>
+          <div class="form-group">
+            <label id="name-label" for="name">Name</label>
+              <input id="name" type="text" placeholder="Enter your name" required>
+          </div>
+          <div class="form-group">  
+            <label id="email-label" for="email">E-Mail</label>
+              <input id="email" type="email" placeholder="Enter your email" required>
+          </div>
+          <div class="form-group">  
+            <label id="number-label" for="number">Age</label>
+              <input id="number" type="number" min="10" max="120" placeholder="Age" required>
+          </div>
+        </fieldset>
+        <fieldset>
+          <div class="form-group">
+            <label for="dropdown"><h3>Dropdown Selector</h3>
+              <select id="dropdown" name="dropdown">
+                <option value="">(Select One)</option>
+                <option value="1">item 1</option>
+                <option value="2">item 2</option>
+              </select>
+              </label>
+          </div>
+          <div class="form-group">
+            <legend><h3>Radio Selector</h3> </legend>
+              <label for="radio-1">
+              <input id="radio-1" class="radio-input" type="radio" name="radio-selector" value="1" checked>Radio Input</label>
+              <label for="radio-2">
+              <input id="radio-2" class="radio-input" type="radio" name="radio-selector" value="2">Radio Input 2</label>
+          </div>
+          <div class="form-group">
+            <legend><h3>Checkbox Selector</h3></legend>
+              <label for="check-1">
+              <input id="check-1" class="checkbox-input" type="checkbox" name="checkbox-selector" value="check-1" >Checkbox Input 1</label>
+              <label for="check-2">
+              <input id="check-2" class="checkbox-input" type="checkbox" name="checkbox-selector" value="check-2" >Checkbox Input 2</label>
+              <label for="check-3">
+              <input id="check-3" class="checkbox-input" type="checkbox" name="checkbox-selector" value="check-3" >Checkbox Input 3</label>
+              <label for="check-4">
+              <input id="check-4" class="checkbox-input" type="checkbox" name="checkbox-selector" value="check-4" >Checkbox Input 4</label>
+              <label for="check-5">
+              <input id="check-5" class="checkbox-input" type="checkbox" name="checkbox-selector" value="check-5" >Checkbox Input 5</label>
+          </div>
+        </fieldset>
+        <fieldset>
+        <div class="form-group">
+          <p>Add any additional comments you may have</p>
+          <textarea placeholder="Enter your comments here..."></textarea>
+        </div>
+        </fieldset>
+        <!-- BOTON -->
+        <div class="form-group">
+          <button id="submit" type="submit">SUBMIT</button>
+        </div>
+      </form>
+    </div>
+  </body>
