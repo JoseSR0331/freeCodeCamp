@@ -1,0 +1,85 @@
+body {
+    font-family: "Lucida Console", "Courier New";
+    color: rgb(235, 235, 235);
+    padding: 20px 5px 5px ;
+    height: 100%;
+    width: 100%;
+    background-color: #1b1b32;
+  }
+  
+  /* HEADER */
+  header{
+    margin: 1em auto;
+    text-align: center;
+    padding-bottom: 50px;
+    width: 100%;
+    height: 50px;
+    display: inline-block;
+    justify-content: center;
+  }
+  header h2{
+    font-weight: normal;
+    color: #ccccd2;
+  }
+  
+  /* MAIN CONTAINER*/
+  #main{
+    background: #3b3b4f;
+    box-sizing: border-box;
+    height: 90%;
+    width: 100%;
+    border-radius: 7px;
+  }
+  
+  /* IMAGE AND CAPTION */
+  #img-div{
+    background-color: #1b1b32;
+    max-width: 97%;
+    max-height: 100%;
+    min-width: 50px;
+    min-height: 20px;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin: 0 15px;
+    padding: 9px;
+    border-radius: 0 0 7px 7px;
+  }
+  img{
+    display: block;
+  }
+  #image{
+    max-width: 100%;
+    max-height: 100%;
+    min-width: 50px;
+    min-height: 20px;
+  }
+  #img-caption{
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  
+  /* TEXT SECTIONS */
+  section {
+    max-width: 95%;
+    max-height: 95%;
+    display: block;
+    text-align: center;
+    margin: 30px;
+    border-bottom: 2px solid #1b1b32;
+  }
+  
+  /* Anchor styles */
+  #wiki{
+    text-align: center;
+    display: block;
+  }
+  a{
+    color: #d69600;
+  }
+  a:hover{
+    color: #e6cf02;
+  }
+  a:onclick{
+    color: rgb(235, 235, 235);
+  }
