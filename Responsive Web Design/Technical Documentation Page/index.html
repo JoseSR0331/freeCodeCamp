@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+    <html lang="es">
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Technical Documentation Page</title>
+      <!-- Style Sheet -->
+      <link rel="stylesheet" href="styles.css">
+    </head>
+    <!-- CONTENT -->
+    <body>
+      <main id="main-doc">
+        <section class="main-section" id="HTML_Básico">
+          <header>
+            HTML Básico
+          </header>
+          <p>HTML (HyperText Markup Language) es el código que se utiliza para estructurar y desplegar una página web y sus contenidos.</p>
+          <p>HTML no es un lenguaje de programación; es un lenguaje de marcado que define la estructura de tu contenido.</p>
+          <code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Mi página&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Bienvenido&lt;/h1&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code>
+          <ul>
+            <li>HTML utiliza "marcado" para anotar texto, imágenes, y otros contenidos para ser mostrados en un navegador web.</li>
+            <li>HTML incluye elementos especiales como &lt;head&gt;, &lt;title&gt;, &lt;body&gt;, &lt;header&gt;, &lt;footer&gt;, &lt;article&gt;, &lt;section&gt;, entre otros.</li>
+          </ul>
+          <p>Un elemento HTML se distingue de otro texto en un documento mediante "etiquetas", que consisten en el nombre del elemento rodeado por "&lt;" y "&gt;".</p>
+        </section>
+        <section class="main-section" id="CSS_Básico">
+          <header>
+            CSS Básico
+          </header>
+          <p>CSS (Cascading Style Sheets) es el lenguaje que usamos para dar estilo a un documento HTML.</p>
+          <p>CSS describe cómo los elementos HTML deben ser mostrados en pantalla, papel, o en otros medios.</p>
+          <code>body {
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  color: blue;
+  text-align: center;
+}</code>
+          <ul>
+            <li>CSS se puede añadir a documentos HTML de tres maneras diferentes: en línea, interna y externa.</li>
+            <li>La forma más común y recomendada es un archivo CSS externo vinculado al HTML.</li>
+          </ul>
+          <p>CSS utiliza selectores para aplicar estilos a elementos específicos en el documento HTML.</p>
+        </section>
+        <section class="main-section" id="JavaScript_Básico">
+          <header>
+            JavaScript Básico
+          </header>
+          <p>JavaScript es un lenguaje de programación que permite implementar funcionalidades complejas en páginas web.</p>
+          <p>Cada vez que una página web hace más que simplemente mostrar información estática, es probable que JavaScript esté involucrado.</p>
+          <code>function saludar() {
+  let nombre = document.getElementById("nombre").value;
+  alert("¡Hola, " + nombre + "!");
+}</code>
+          <ul>
+            <li>JavaScript es un lenguaje de programación que te permite crear contenido que se actualiza dinámicamente.</li>
+            <li>Puede manipular el contenido HTML y CSS para actualizar una interfaz de usuario dinámicamente.</li>
+          </ul>
+          <p>JavaScript es un lenguaje de programación completo, que puede ser utilizado tanto en el cliente como en el servidor con Node.js.</p>
+        </section>
+        <section class="main-section" id="Responsive_Design">
+          <header>
+            Responsive Design
+          </header>
+          <p>El diseño responsive es una técnica de diseño web que hace que tu contenido web se vea bien en todos los dispositivos.</p>
+          <p>Un diseño responsive utiliza CSS y HTML para redimensionar, ocultar, reducir, ampliar o mover el contenido para que se vea bien en cualquier pantalla.</p>
+          <code>@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+  
+  .container {
+    width: 100%;
+  }
+}</code>
+          <ul>
+            <li>Las media queries en CSS permiten aplicar estilos diferentes para diferentes tamaños de pantalla.</li>
+            <li>El viewport meta tag es esencial para un diseño responsive en dispositivos móviles.</li>
+          </ul>
+          <p>Un enfoque común es diseñar para dispositivos móviles primero, luego agregar más estilos para pantallas más grandes.</p>
+        </section>
+        <section class="main-section" id="Accesibilidad_Web">
+          <header>
+            Accesibilidad Web
+          </header>
+          <p>La accesibilidad web significa que los sitios web, herramientas y tecnologías están diseñados y desarrollados para que las personas con discapacidades puedan usarlos.</p>
+          <p>Hacer tu sitio web accesible beneficia a individuos, negocios y la sociedad.</p>
+          <code>&lt;img src="imagen.jpg" alt="Descripción de la imagen para lectores de pantalla"&gt;
+&lt;button aria-label="Cerrar" onclick="cerrarModal()"&gt;X&lt;/button&gt;</code>
+          <ul>
+            <li>Utilizar atributos como 'alt' en imágenes y 'aria-label' en elementos interactivos mejora la accesibilidad.</li>
+            <li>El contraste adecuado entre texto y fondo es importante para usuarios con deficiencias visuales.</li>
+          </ul>
+          <p>Los estándares WCAG (Web Content Accessibility Guidelines) proporcionan pautas sobre cómo hacer que el contenido web sea más accesible.</p>
+        </section>
+      </main>
+      <nav id="navbar">
+        <header>
+          Documentación Técnica Web
+        </header>
+        <ul>
+          <li>
+            <a class="nav-link" href="#HTML_Básico">HTML Básico</a><br>
+          </li>
+        <li>
+            <a class="nav-link" href="#CSS_Básico">CSS Básico</a><br>
+          </li>
+          <li>
+            <a class="nav-link" href="#JavaScript_Básico">JavaScript Básico</a><br>
+          </li>
+          <li>
+            <a class="nav-link" href="#Responsive_Design">Responsive Design</a><br>
+          </li>
+          <li>
+            <a class="nav-link" href="#Accesibilidad_Web">Accesibilidad Web</a><br>
+          </li>
+      </ul>
+      </nav>
+    </body>
+    </html>

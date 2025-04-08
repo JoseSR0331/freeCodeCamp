@@ -1,0 +1,152 @@
+/* GLOBAL STYLES */
+html {
+    min-width: 290px;
+    background-color: #ffffff;
+    font-family: sans-serif, Arial;
+    line-height: 1.5;
+  }
+  *, *::before, *::after {
+    box-sizing: inherit;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    color: #333;
+  }
+  
+  /* MAIN CONTENT */
+  main{
+    position: absolute;
+    left: 300px;
+    padding: 50px;
+    margin-bottom: 110px;
+    margin-left: 0;
+  }
+  
+  .main-section{
+    padding-left: 10px;
+    margin-bottom: 50px;
+  }
+  
+  .main-section header {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #232344;
+  }
+  
+  .main-section p {
+    margin: 15px 0;
+  }
+  
+  .main-section code {
+    display: block;
+    background-color: #f7f7f7;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 15px 0;
+    border-left: 3px solid #232344;
+    font-family: monospace;
+    white-space: pre-wrap;
+    overflow-x: auto;
+  }
+  
+  .main-section ul {
+    padding-left: 60px;
+  }
+  
+  .main-section li {
+    margin-bottom: 10px;
+  }
+  
+  /* NAVBAR */
+  nav{
+    display: block;
+    padding: 10px 15px 10px 20px;
+  }
+  #navbar {
+    position: fixed;
+    min-width: 290px;
+    top: 0px;
+    left: 0px;
+    width: 300px;
+    height: 100%;
+    border-right: solid 3px #232344;
+    background-color: #f8f8f8;
+  }
+  #navbar a{
+    border: solid 1px #232344;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    width: 100%;
+    display: block;
+    padding: 10px 30px;
+    text-decoration: none;
+    cursor: pointer;
+    color: #232344;
+    transition: background-color 0.3s ease;
+  }
+  
+  #navbar a:hover {
+    background-color: #e8e8e8;
+  }
+  
+  #navbar header{
+    padding: 20px 0 15px 10px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #232344;
+  }
+  
+  #navbar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    overflow-y: auto;
+    height: calc(100% - 80px);
+  }
+  
+  /* MEDIA QUERIES */
+  @media (max-width: 1199px) and (min-width: 769px) {
+    main{
+      width: calc(100% - 300px);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    #navbar {
+      position: relative;
+      width: 100%;
+      height: auto;
+      border-right: none;
+      border-bottom: solid 3px #232344;
+    }
+    
+    main {
+      position: relative;
+      left: 0;
+      width: 100%;
+      padding: 20px;
+    }
+    
+    #navbar ul {
+      height: auto;
+      border-top: 1px solid #232344;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    #navbar header {
+      font-size: 18px;
+    }
+    
+    .main-section header {
+      font-size: 22px;
+    }
+    
+    code {
+      font-size: 14px;
+    }
+  }
