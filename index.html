@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portafolio FreeCodeCamp</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- HEADER -->
+  <header>
+    <h1>Portafolio FreeCodeCamp</h1>
+    <p>Proyectos de certificacion Responsive Web Design</p>
+    <div class="toggle-container">
+        <input type="checkbox" id="dark-mode-toggle" />
+        <label for="dark-mode-toggle" class="toggle-label">
+          <div class="ball">
+            <span class="icon sun">🌞</span>
+            <span class="icon moon">🌙</span>
+          </div>
+        </label>
+    </div>         
+  </header>
+
+  <section class="projects" id="projects-container">
+    <!-- Aquí se inyectan los proyectos con JavaScript -->
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>Jose Sanchez Rodriguez - 2024</p>
+    <div class="social-icons">
+        <a href="https://github.com/JoseSR0331" target="_blank" aria-label="GitHub">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/github.svg" width="24" alt="GitHub">
+        </a>
+        <a href="https://linkedin.com/in/josesr0331" target="_blank" aria-label="LinkedIn">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" width="24" alt="LinkedIn">
+        </a>
+      </div>      
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script>
+    const githubUser = 'JoseSR0331';
+    const repoName = 'freecodecamp';
+    const baseFolder = 'Responsive Web Design';
+
+    const projects = [
+        { name: 'Survey Form', folder: 'Survey Form', logo: '📝' },
+        { name: 'Tribute Page', folder: 'Tribute Page', logo: '🎖️' },
+        { name: 'Technical Documentation', folder: 'Technical Documentation Page', logo: '📚' },
+        { name: 'Product Landing Page', folder: 'Product Landing Page', logo: '🛍️' },
+        { name: 'Personal Portfolio', folder: 'Personal Portfolio', logo: '💼' }
+    ];
+
+    const container = document.getElementById('projects-container');
+
+    projects.forEach(project => {
+      const card = document.createElement('div');
+      card.className = 'card';
+      card.innerHTML = `<h3>${project.logo} ${project.name}</h3><p>Ver en GitHub</p>`;
+      card.onclick = () => {
+        const url = `https://github.com/${githubUser}/${repoName}/tree/main/${baseFolder}/${project.folder}`;
+        window.open(url, '_blank');
+      };
+      container.appendChild(card);
+    });
+  </script>
+  <!-- SCRIPT PARA MODO OSCURO -->
+  <script>
+    const toggleInput = document.getElementById('dark-mode-toggle');
+    // Cargar preferencia
+    window.addEventListener('DOMContentLoaded', () => {
+      const darkMode = localStorage.getItem('dark-mode');
+      if (darkMode === 'enabled') {
+        document.body.classList.add('dark-mode');
+        toggleInput.checked = true;
+      }
+    });
+    // Cambiar y guardar
+    toggleInput.addEventListener('change', () => {
+      if (toggleInput.checked) {
+        document.body.classList.add('dark-mode');
+        localStorage.setItem('dark-mode', 'enabled');
+      } else {
+        document.body.classList.remove('dark-mode');
+        localStorage.setItem('dark-mode', 'disabled');
+      }
+    });
+  </script>   
+</body>
+</html>
